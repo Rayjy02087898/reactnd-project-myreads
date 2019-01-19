@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Books extends Component {
   state = {
@@ -28,7 +29,7 @@ class Books extends Component {
           }}>
           </div>
           <div className="book-shelf-changer">
-            <select value={ this.state.shelf } onChange={(event) => this.changeShelf(book, event.target.value)}>
+            <select value={this.props.book.shelf} onChange={(event) => this.changeShelf(book, event.target.value)}>
               <option value="" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>
@@ -37,11 +38,15 @@ class Books extends Component {
             </select>
           </div>
         </div>
-        <div className="book-title">{ book.title }</div>
-        <div className="book-authors">{ book.authors }</div>
+        <div className="book-title">{book.title}</div>
+        <div className="book-authors">{book.authors ? book.authors.join(', ') : ''}
+        </div>
       </div>
 
     )
+  }
+  static propTypes = {
+    Books: PropTypes.object.isRequired
   }
 }
 

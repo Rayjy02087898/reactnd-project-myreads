@@ -90,3 +90,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 运行
+* 下载或克隆资源
+* 安装依赖项
+
+```js
+$npm install
+```
+
+* 安装Ract路由
+
+```js
+$npm install react-router-dom --save-dev
+```
+
+* 运行项目(或用npm替换yarn)
+
+```js
+$yarn start
+```
+
+## 图书订阅浏览器
+
+* add a book 可搜索新增图书
+
+* 可将图书添加至Currently Reading， Want To Read， Read
+
+* none可取消添加图书
+
